@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import { getAllPostsData } from "../lib/posts";
 import Post from "../components/Post";
 
-const Blog = ({ posts }) => {
+export default function Blog({ posts }) {
   return (
     <Layout title="Blog">
       <ul className="m-10">
@@ -10,9 +10,7 @@ const Blog = ({ posts }) => {
       </ul>
     </Layout>
   );
-};
-
-export default Blog;
+}
 
 // getStaticPropsはビルド時に一度だけサーバー側で実行される
 export async function getStaticProps() {
